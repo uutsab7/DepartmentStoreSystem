@@ -1,0 +1,32 @@
+{% extends 'partials/base.html' %}
+{% block title %}Product Page {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-4">
+        <div class="col-md-6 offset-md-3">
+            <div class="border bg-white p-3 ">
+                <h3>Delete Item</h3>
+                <hr>
+                <div class="alert alert-danger">
+                    <h4>Are you sure, ou want to delete?</h4>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    {% comment %} <a href="{% url 'dashboard:product_delete' item.id %}"> {% endcomment %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    {% comment %} </a> {% endcomment %}
+                    {% comment %} <a href="{% url 'dashboard:product' %}"> {% endcomment %}
+                        <button type="submit" class="btn btn-warning">Go Back</button>
+                    {% comment %} </a> {% endcomment %}
+                    
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

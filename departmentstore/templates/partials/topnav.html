@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-info text-white">Information</div>
+                <div class="card-body">
+                    <marquee behaviour="" direction="">
+                        <h3 class="my-4">This is the information</h3>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-info text-white">Statiscics</div>
+                <div class="card-body my-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="text-decoration-none text-dark" href="{% url 'dashboard:staff' %}">
+                                <div class="card my-card shadow text-center">
+                                    <h4 class="my-2">Staff<i class="fas fa-users"></i></h4>
+                                    <h3 class="my-1">{{workers_count}}</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="text-decoration-none text-dark" href="{% url 'dashboard:product' %}">
+                                <div class="card my-card shadow text-center">
+                                    <h4 class="my-2">Product<i class="fas fa-users"></i></h4>
+                                    <h3 class="my-1">{{product_count}}</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="text-decoration-none text-dark" href="{% url 'dashboard:order' %}">
+                                <div class="card  my-card shadow text-center">
+                                    <h4 class="my-2">Orders<i class="fas fa-users"></i></h4>
+                                    <h3 class="my-1">{{orders_count}}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
